@@ -1,0 +1,15 @@
+language: python
+python:
+- '2.7'
+install:
+- pip install .
+script: nosetests
+deploy:
+  provider: pypi
+  user: pgmillon
+  password:
+    secure: nzq02mPazz2Ec9rd6bbDfrNLf5DSI3TeZy78Pg1CSL9HyMjS2/HyizoGSAgIN5new6iXWkXj0OXQjkQD/3Oik1bgGkfr5tERCy6AbW/2oBvAHZU3b7fbv0B3C4v4zAQGJYAjWTN8SlCWwxm5ejt7DhJNHaIXmG3V07O0ofAJ7bU3eIQ6LKY5UqidfcnyAOq8l+xaBlVYMYEwRAR2e+w5pHPoXU6nkqOm5REIK2CuQxhn/JyLSRnhxBQajxhR6ocx+aAmir0pYYd2uMXgXQYLX3BtOixfP/o8Rbpl9d7efQ8cJ0gL34XgTDdnocd9muu3W12YFXNu4RfItVsifIx1unPgv8ezSoPPRRqEuy3yaxTWrNya0FZN/x3iEm+3mn7aWOKimJb9v7nwU7L6cD0rg0GipmAiZwaRnEhQSHQK96Sa9ONXwWmoFSdkgqB84QjgXjhEGCkih8TMnd4xwKM1l+wB8/TGiO6xPQk7wzJSviKy6iD76Z3kEkZjBu0q3IA+9cbFqmdX46Eraz070UbSNRprnfHjuLPaTzGriVBc9UM3Nrq0rMhMpJMy+t5yDiiaoN1PLRuYTNtguXctlKUaGIMW+CpjBRK87kIpVgHxO07KGUFiuRmVe2iak+pEgxLZVU7l++ca/oqLplEHP49aSQ2AZPHVMxWUPr1dUr2JmO8=
+  on:
+    tags: true
+    repo: pgmillon/json-awk
+  distributions: sdist
